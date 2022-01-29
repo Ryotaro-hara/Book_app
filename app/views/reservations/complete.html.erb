@@ -1,0 +1,27 @@
+<div class="reservation-complete">
+    <h2>予約が完了致しました</h2>
+
+    <div class="complete-container">
+        <table class="complete-table">
+            <tr>
+                <th>予約した部屋</th>
+                <td><%= @reservation.room.room_name %></td>
+            </tr>
+            <tr>
+                <th>開始日</th>
+                <td><%= @reservation.check_in %></td>
+            </tr>
+            <tr>
+                <th>終了日</th>
+                <td><%= @reservation.check_out %></td>
+            </tr>
+            <tr>
+                <th>合計金額</th>
+                <td><%= @reservation.total_amount %></td>
+            </tr>
+        </table>
+        <div class="return-btn btn">
+            <%= link_to "トップ画面に戻る", "/"%>
+        </div>    
+    </div>
+</div>

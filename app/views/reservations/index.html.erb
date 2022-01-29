@@ -1,0 +1,33 @@
+<div class="reservation-lists">
+    <h3>予約済みルーム</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ルーム画像</th>
+                <th>ルーム名</th>
+                <th>合計金額</th>
+                <th>開始日</th>
+                <th>終了日</th>
+                <th>予約確定日時</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @reservations.each do |reservation| %>
+                <% if reservation.user_id == current_user.id %>
+                    <tr>
+                        <% if reservation.room.image.attached? %>
+                            <td><%= image_tag reservation.room.image, size: "250x150", alt: "ルーム画像" %></td>
+                        <% end %>
+                        <td><%= reservation.room.room_name %></td>
+                        <td><%= reservation.total_amount %></td>
+                        <td><%= reservation.check_in %></td>
+                        <td><%= reservation.check_out %></td>
+                        <td><%= reservation.created_at.to_s(:datetime_jp) %></td>
+                    </tr>
+                <% end %>
+            <% end %>
+        </tbody>
+    </table>
+</div>

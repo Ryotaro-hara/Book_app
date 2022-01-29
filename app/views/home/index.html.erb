@@ -1,0 +1,37 @@
+<div class="home-wrapper">
+  <div class="main-view">
+    <div class="search-form">
+      <div class="search-container">
+        <h2>さぁ、旅に出発しよう</h2>
+        <%= form_with url: search_rooms_path, method: :get, local: true do |f| %>
+          <%= f.text_field :search, placeholder: "キーワードを入力", class:"search-area" %>
+          <%= f.submit "探す", class: "search-btn" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="recommendation-area">
+    <h2>おすすめのエリア</h2>
+    <div class="area-container">
+      <div class="tokyo-area area-content">
+        <p>東京</p>
+        <a href="http://localhost:3000/rooms/search?search=%E6%9D%B1%E4%BA%AC&commit=%E6%8E%A2%E3%81%99"><%= image_tag "img_tokyo.jpeg", size:'250x400', alt:"東京" %></a>  
+      </div>
+      <div class="osaka-area area-content">
+        <p>大阪</p>
+        <a href="http://localhost:3000/rooms/search?search=%E5%A4%A7%E9%98%AA&commit=%E6%8E%A2%E3%81%99"><%= image_tag "img_osaka.jpeg", size:'250x400', alt:"大阪" %></a>
+      </div> 
+      <div class="kyoto-area area-content">
+        <p>京都</p>
+        <a href="http://localhost:3000/rooms/search?search=%E4%BA%AC%E9%83%BD&commit=%E6%8E%A2%E3%81%99"><%= image_tag "img_kyoto.jpeg", size:'250x400', alt:"京都" %></a>
+      </div> 
+      <div class="sapporo-area area-content">
+        <p>札幌</p>
+        <a href="http://localhost:3000/rooms/search?search=%E6%9C%AD%E5%B9%8C&commit=%E6%8E%A2%E3%81%99"><%= image_tag "img_sapporo.jpeg", size:'250x400', alt:"札幌" %></a>
+      </div>     
+    </div>
+  </div>
+</div>
+
+

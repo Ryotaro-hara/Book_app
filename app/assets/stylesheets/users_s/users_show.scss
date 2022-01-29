@@ -1,0 +1,49 @@
+.user-profile {
+    padding: 30px 0;
+    margin: 0 20px;
+}
+
+.profile-image {
+    text-align: center;
+    border-top: 1px solid #eaedef;
+    padding: 40px 0;
+}
+
+.profile-image img {
+    border-radius: 50px;
+}
+
+.user_detail {
+	width: 100%;
+    border-collapse:collapse
+}
+
+.user_detail tr {
+    border-top: 1px solid #eaedef;
+}
+
+.user_detail tr:last-child {
+    border-bottom: 1px solid #eaedef;
+}
+
+.user_detail th {
+    width: 40%;
+    padding: 30px 20px;
+}
+
+.user_detail td {
+    width: 60%;
+}
+
+.user_edit-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    background-color: #4a90e2;
+}
+
+.user_edit-btn a {
+    color: white;
+}
+
+

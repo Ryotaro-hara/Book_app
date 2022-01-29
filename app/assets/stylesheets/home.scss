@@ -1,0 +1,90 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.main-view {
+    background-image: url(img_mainView.jpg);
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+}
+
+.search-form {
+    background-color: white;
+    border: 1px solid white;
+    padding: 10px;
+    position: absolute;
+    left: 50px;
+    top: 250px;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+.search-container {
+    text-align: center;
+}
+
+.search-container h2 {
+    font-size: 30px;
+}
+
+.search-area {
+    width: 100%;
+    padding: 10px;
+    font-size: 10px;
+    margin: 15px 0;    
+}
+
+.search-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 10px;
+    background-color: rgb(136, 128, 128);
+    color: white;    
+}
+
+.search-btn:hover {
+    background-color: rgb(105, 102, 102);
+}
+
+.recommendation-area {
+    padding: 30px 100px;
+}
+
+.recommendation-area h2 {
+    padding: 0 40px 20px 40px;
+}
+
+.area-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.area-content {
+    width: 25%;
+    padding: 0 20px 20px;
+    position: relative;
+}
+
+.area-content img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.area-content p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+}
+
+@media screen and (max-width: 960px) {
+    .area-content {
+        width: 50%;
+    }    
+}

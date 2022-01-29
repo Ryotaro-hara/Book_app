@@ -1,0 +1,49 @@
+.form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 0 10px;
+    background-color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+}
+
+.user-form {
+    text-align: center;
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+}
+
+.field p {
+    margin-right: 15px;
+    padding: 5px;
+    background-color: rgb(233, 118, 118);
+    color: white;
+    border-radius: 10px;
+}
+
+.field input {
+    width: 60%;
+    height: 45px;
+    margin: auto 0;       
+}
+
+.actions li {
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.actions input{
+    width: 85%;
+    height: 100%;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 5px;
+}
+
+.actions a {
+    color: #4a90e2;
+}
+
+

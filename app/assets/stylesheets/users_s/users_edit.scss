@@ -1,0 +1,77 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.user-edit {
+    width: 100%;
+    height: 100%;
+}
+
+.user-edit h2 {
+    padding: 40px 0 0 40px;
+}
+
+.user-edit-view {
+    max-width: 880px;
+    margin: 40px auto;
+    border-top: 1px solid #eaedef;    
+}
+
+.edit-content {
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;    
+}
+
+.image-row input {
+    margin-top: 10px;
+}
+
+.edit-content .label::after{
+    content: "必須";
+    color: white;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.edit-content .row input, textarea{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.edit-content .row input{
+    padding: 10px 0;
+    border: 1px solid gray;
+}
+
+.edit-content .row textarea {
+    height: 80px;
+    border: 1px solid gray;
+}
+
+.edit-submit, .destroy-submit {
+    margin: 30px 25px;
+}
+
+.edit-submit-btn {
+    width: 100%;
+    text-align: center;
+    background-color: #4a90e2;
+    padding: 10px 15px;
+    color: white;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.destroy-submit-btn {
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    padding: 10px 15px;
+    color: white;
+    display: inline-block;
+    border-radius: 10px;    
+}

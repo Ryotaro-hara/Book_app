@@ -1,0 +1,32 @@
+.reservation-complete {
+    padding: 20px 0;
+    margin: 0 100px;    
+}
+
+.complete-table {
+    border-top: 1px solid #eaedef;
+    width: 100%;    
+}
+
+.complete-table th{
+    text-align: start;
+    border-bottom: 1px solid #eaedef;
+}
+
+.complete-table td {
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+}
+
+.return-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #4a90e2;
+}
+
+.return-btn a {
+    color: white;
+    display: block;
+
+}

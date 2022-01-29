@@ -1,0 +1,59 @@
+.room-show {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.room-about {
+    margin: 0 20px;
+}
+
+.room-about img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.room-info {
+    display: flex;
+    font-size: 20px;
+    border-bottom: 1px solid #eaedef;
+}
+
+.room-name {
+    margin-right: 50px;
+}
+
+.room-introduction {
+    padding: 20px 0;
+    border-bottom: 1px solid #eaedef;
+}
+
+.reservation {
+    margin: 0 20px;
+    border: 1px solid #eaedef;    
+}
+
+.room-reservation {
+    margin: 20px;
+}
+
+.reservation p {
+    font-size: 20px;
+}
+
+.reservation label {
+    font-size: 15px;
+}
+
+.reservation input {
+    width: 100%;
+    margin: 10px 0 20px;
+    height: 45px;
+}
+
+@media screen and (max-width: 767px) {
+    .room-show {
+        flex-direction: column;
+    }        
+}

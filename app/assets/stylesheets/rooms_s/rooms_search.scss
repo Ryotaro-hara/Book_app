@@ -1,0 +1,48 @@
+.room-search {
+    padding: 20px 30px;
+}
+
+.room-search h2 {
+    margin-bottom: 30px;
+}
+
+.room-search-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.room-search-containers {
+    width: 25%;
+    padding: 0 10px 10px;
+}
+
+.room-search-container {
+    border:1px solid gray;    
+}
+
+.room-search-container img {
+    margin-top: 10px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.room-search-container p {
+    margin: 10px 20px;
+}
+
+.room-search-container p:last-child {
+    text-align: end;
+}
+
+@media screen and (max-width: 960px) {
+    .room-search-containers {
+        width: 33.3%;
+    }    
+}
+
+@media screen and (max-width: 767px) {
+    .room-search-containers {
+        width: 50%;
+    }     
+}

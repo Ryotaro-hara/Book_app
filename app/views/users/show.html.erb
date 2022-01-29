@@ -1,0 +1,36 @@
+<div class="user-profile">
+  <h2>プロフィール</h2>
+
+  <div class="profile-image">
+    <% if @user.image.present? %>
+      <%= image_tag @user.image, size:'100x100' %>
+    <% else %>
+      <%= image_tag "default_icon.jpeg", size:'100x100' %>
+    <% end %>
+  </div>
+
+  <div class="profile-content">
+    <table class="user_detail">
+      <tr>
+        <th>ユーザー名</th>
+        <td><%= @user.name %></td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <th>自己紹介</th>
+        <td><%= @user.introduction %></td>
+      </tr>
+      <tr>
+        <th>パスワード</th>
+        <td>*********</td>
+      </tr>
+    </table>
+    <div class="user_edit-btn btn">
+      <%= link_to "編集する" , edit_user_registration_path %>
+    </div>   
+  </div>
+</div>
+

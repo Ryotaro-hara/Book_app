@@ -8,9 +8,86 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="header-inner">
+        <div class="header-left">
+          <div class="header-logo">
+            <a href="/"><img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png" alt="ロゴ画像"></a>
+          </div>
+          <div class="header-search">
+            <%= form_with url: search_rooms_path, method: :get, local: true do |f| %>
+              <%= f.text_field :search, placeholder: "エリア", class:"header-search" %>
+              <%= f.submit "探す", class:"hidden-btn" %>
+            <% end %>
+          </div>
+          <div class="header-search">
+            <%= form_with url: search_rooms_path, method: :get, local: true do |f| %>
+              <%= f.text_field :search, placeholder:"キーワード", class:"header-search" %>
+              <%= f.submit "探す", class:"hidden-btn" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="user-menu">
+        <% if user_signed_in? %>
+        <div class="user-container">
+          <div class="user-name">
+            <p><%= @user.name %></p>
+          </div>
+          <div class="user-icon">
+            <% if @user.image.present? %>
+              <%= image_tag @user.image, size:'60x60',alt: 'アイコン画像', id:"acount" %>
+            <% else %>
+              <%= image_tag "default_icon.jpeg", size:'60x60',alt: 'アイコン画像', id:"acount" %>
+            <% end %>   
+          </div>
+        </div>
+
+          <nav class="menu">
+            <ul id="menus">
+              <li>
+                <%= link_to "ルーム登録", new_room_path %>
+              </li>
+              <li>
+                <%= link_to "ルーム一覧", rooms_path %>
+              </li>
+              <li>
+                <%= link_to "予約ルーム一覧", reservations_path %>
+              </li>
+              <li>
+                <%= link_to "設定", users_show_path %>
+              </li>
+              <li>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+        <% else %>
+            <ul class="login-menus">
+              <li>
+                <%= link_to "新規登録", new_user_registration_path, {class: "btn btn-primary"} %>
+              </li>
+              <li>
+                <%= link_to "ログイン", new_user_session_path, {class: "btn btn-secondary"} %>
+              </li>
+            </ul>
+          </nav>  
+        <% end %>
+        </div>
+      </div>
+    </header>
+    <main>
+      <% if flash[:notice] %>
+        <div class="flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>@2022 POTEPAN.INC.</P>
+    </footer>
   </body>
 </html>

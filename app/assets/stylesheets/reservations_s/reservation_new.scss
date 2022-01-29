@@ -1,0 +1,42 @@
+.reservation-confirmation {
+    margin: 30px 200px;
+    border: 1px solid #eaedef;
+}
+
+.reservation-confirmation h3 {
+    margin: 10px 20px;
+    padding: 10px 0;
+    font-size: 25px;
+    border-bottom: 1px solid #eaedef;
+}
+
+.confirmation-container {
+    margin: 0 20px;
+}
+
+.reservation-confirmation .room-price {
+    font-size: 20px;    
+}
+
+.reservation-total_day, .reservation-customer {
+    padding: 10px 0;
+    border-bottom: 1px solid #eaedef;
+    font-size: 16px;
+    margin-bottom: 10px;        
+}
+
+.reservation-total_amount {
+    padding: 10px 0;
+    border-bottom: 1px solid #eaedef;    
+}
+
+.reservation-submit .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.reservation-submit {
+    margin: 30px 20px 0;
+}

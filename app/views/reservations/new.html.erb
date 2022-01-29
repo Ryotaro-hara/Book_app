@@ -1,0 +1,38 @@
+<div class="reservation-confirmation">
+    <h3>予約内容の確認</h3>
+    <div class="confirmation-container">
+        <div class="room-price">
+            <%= "¥#{@reservation.room.price} / 日" %>
+        </div>
+        <h5>開始日</h5>
+        <p><%= @reservation.check_in %></p>
+        <h5>終了日</h5>
+        <p><%= @reservation.check_out %></p>
+        <div class="reservation-total_day">
+            <%= "宿泊日数 : #{@reservation.total_day}日" %>
+        </div>
+        <div class="reservation-customer">
+            <%= "人数 : #{@reservation.customer}人" %>
+        </div>
+        <div class="reservation-total_amount">
+            <h5>合計金額</h5>
+            <p><%= @reservation.total_amount %></p>
+            <p>上記内容でよろしければ『予約を確定』を押して下さい</p>
+        </div>
+    </div>
+
+    <%= form_with model: @reservation, method: :get, url: complete_reservations_path  do |f| %>
+        <%= f.hidden_field :check_in, value:@reservation.check_in %>
+        <%= f.hidden_field :check_out, value:@reservation.check_out %>
+        <%= f.hidden_field :customer, value:@reservation.customer %>
+        <%= f.hidden_field :total_day, value:@reservation.total_day %>
+        <%= f.hidden_field :total_amount, value:@reservation.total_amount %>
+        <%= f.hidden_field :user_id, value:current_user.id %>
+        <%= f.hidden_field :room_id ,value: @reservation.room_id %>
+
+        <ul class="reservation-submit"> 
+            <li><%= f.submit "予約を確定", class: "btn btn-primary" %></li>
+            <li><%= link_to "予約画面に戻る", :rooms, class: "btn btn-secondary" %></li>
+        </ul>
+    <% end %>
+</div>
